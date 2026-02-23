@@ -2,6 +2,15 @@
 
 Django backend for managing salon users, appointments, and payments.
 
+## What This Project Does
+
+- User registration, login, and logout
+- Appointment booking with future-date validation
+- Double-booking prevention for the same stylist and time slot
+- Appointment listing, filtering, and cancellation
+- One payment record per appointment with mark-as-paid flow
+- Simple dashboard with booking and payment counts
+
 ## Tech Stack
 
 - Python
@@ -14,6 +23,18 @@ Django backend for managing salon users, appointments, and payments.
 - `accounts/`: custom user model and account logic
 - `appointments/`: appointment-related models and views
 - `payments/`: payment-related models and views
+- `templates/`: all frontend templates
+
+## Main Routes
+
+- `/`: home page
+- `/accounts/register/`: register
+- `/accounts/login/`: login
+- `/dashboard/`: user dashboard
+- `/appointments/`: appointment list and filters
+- `/appointments/new/`: create appointment
+- `/payments/`: payment list and payment update
+- `/admin/`: Django admin panel
 
 ## Local Setup
 
