@@ -199,13 +199,13 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOWED_ORIGINS = env_list('CORS_ALLOWED_ORIGINS', default='http://localhost:3000,http://127.0.0.1:3000')
-CSRF_TRUSTED_ORIGINS = env_list('CSRF_TRUSTED_ORIGINS', default='http://localhost:3000,http://127.0.0.1:3000')
+CORS_ALLOWED_ORIGINS = [
+    "https://smartsalon-appointment-system.vercel.app",
+]
 
-if DEBUG:
-    CORS_ALLOW_ALL_ORIGINS = env_bool('CORS_ALLOW_ALL_ORIGINS', default=True)
-else:
-    CORS_ALLOW_ALL_ORIGINS = False
+CSRF_TRUSTED_ORIGINS = [
+    "https://smartsalon-appointment-system.vercel.app",
+]
 
 if not DEBUG:
     SECURE_SSL_REDIRECT = env_bool('SECURE_SSL_REDIRECT', default=True)
