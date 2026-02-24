@@ -75,12 +75,12 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-key-for-development-only')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] #Just for begineer no Security
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #I was getting 400 error
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com",
+    "https://*.onrender.com", # this also added for 400
 ]
 
 
